@@ -1,0 +1,964 @@
+{
+    "_nodetype": "FileAST",
+    "coord": null,
+    "ext": [
+        {
+            "_nodetype": "FuncDef",
+            "body": {
+                "_nodetype": "Compound",
+                "block_items": [
+                    {
+                        "_nodetype": "While",
+                        "cond": {
+                            "_nodetype": "BinaryOp",
+                            "coord": "test.c:3:13",
+                            "left": {
+                                "_nodetype": "UnaryOp",
+                                "coord": "test.c:3:13",
+                                "expr": {
+                                    "_nodetype": "ID",
+                                    "coord": "test.c:3:13",
+                                    "name": "word"
+                                },
+                                "op": "*"
+                            },
+                            "op": "!=",
+                            "right": {
+                                "_nodetype": "Constant",
+                                "coord": "test.c:3:21",
+                                "type": "char",
+                                "value": "'\\0'"
+                            }
+                        },
+                        "coord": "test.c:3:5",
+                        "stmt": {
+                            "_nodetype": "Compound",
+                            "block_items": [
+                                {
+                                    "_nodetype": "If",
+                                    "cond": {
+                                        "_nodetype": "BinaryOp",
+                                        "coord": "test.c:4:13",
+                                        "left": {
+                                            "_nodetype": "FuncCall",
+                                            "args": {
+                                                "_nodetype": "ExprList",
+                                                "coord": "test.c:4:20",
+                                                "exprs": [
+                                                    {
+                                                        "_nodetype": "ID",
+                                                        "coord": "test.c:4:20",
+                                                        "name": "guesses"
+                                                    },
+                                                    {
+                                                        "_nodetype": "UnaryOp",
+                                                        "coord": "test.c:4:30",
+                                                        "expr": {
+                                                            "_nodetype": "ID",
+                                                            "coord": "test.c:4:30",
+                                                            "name": "word"
+                                                        },
+                                                        "op": "*"
+                                                    }
+                                                ]
+                                            },
+                                            "coord": "test.c:4:13",
+                                            "name": {
+                                                "_nodetype": "ID",
+                                                "coord": "test.c:4:13",
+                                                "name": "strchr"
+                                            }
+                                        },
+                                        "op": "!=",
+                                        "right": {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:4:39",
+                                            "name": "NULL"
+                                        }
+                                    },
+                                    "coord": "test.c:4:9",
+                                    "iffalse": {
+                                        "_nodetype": "FuncCall",
+                                        "args": {
+                                            "_nodetype": "ExprList",
+                                            "coord": "test.c:7:20",
+                                            "exprs": [
+                                                {
+                                                    "_nodetype": "Constant",
+                                                    "coord": "test.c:7:20",
+                                                    "type": "string",
+                                                    "value": "\"_ \""
+                                                }
+                                            ]
+                                        },
+                                        "coord": "test.c:7:13",
+                                        "name": {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:7:13",
+                                            "name": "printf"
+                                        }
+                                    },
+                                    "iftrue": {
+                                        "_nodetype": "FuncCall",
+                                        "args": {
+                                            "_nodetype": "ExprList",
+                                            "coord": "test.c:5:20",
+                                            "exprs": [
+                                                {
+                                                    "_nodetype": "Constant",
+                                                    "coord": "test.c:5:20",
+                                                    "type": "string",
+                                                    "value": "\"%c \""
+                                                },
+                                                {
+                                                    "_nodetype": "UnaryOp",
+                                                    "coord": "test.c:5:28",
+                                                    "expr": {
+                                                        "_nodetype": "ID",
+                                                        "coord": "test.c:5:28",
+                                                        "name": "word"
+                                                    },
+                                                    "op": "*"
+                                                }
+                                            ]
+                                        },
+                                        "coord": "test.c:5:13",
+                                        "name": {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:5:13",
+                                            "name": "printf"
+                                        }
+                                    }
+                                },
+                                {
+                                    "_nodetype": "UnaryOp",
+                                    "coord": "test.c:8:9",
+                                    "expr": {
+                                        "_nodetype": "ID",
+                                        "coord": "test.c:8:9",
+                                        "name": "word"
+                                    },
+                                    "op": "p++"
+                                }
+                            ],
+                            "coord": "test.c:3:1"
+                        }
+                    }
+                ],
+                "coord": "test.c:2:1"
+            },
+            "coord": "test.c:2:6",
+            "decl": {
+                "_nodetype": "Decl",
+                "align": [],
+                "bitsize": null,
+                "coord": "test.c:2:6",
+                "funcspec": [],
+                "init": null,
+                "name": "print_word",
+                "quals": [],
+                "storage": [],
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "args": {
+                        "_nodetype": "ParamList",
+                        "coord": "test.c:2:22",
+                        "params": [
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:2:22",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "word",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:2:22",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:2:23",
+                                        "declname": "word",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:2:17",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:2:34",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "guesses",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:2:34",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:2:35",
+                                        "declname": "guesses",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:2:29",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "coord": "test.c:2:6",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "align": null,
+                        "coord": "test.c:2:6",
+                        "declname": "print_word",
+                        "quals": [],
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "coord": "test.c:2:1",
+                            "names": [
+                                "void"
+                            ]
+                        }
+                    }
+                }
+            },
+            "param_decls": null
+        },
+        {
+            "_nodetype": "FuncDef",
+            "body": {
+                "_nodetype": "Compound",
+                "block_items": [
+                    {
+                        "_nodetype": "If",
+                        "cond": {
+                            "_nodetype": "BinaryOp",
+                            "coord": "test.c:13:9",
+                            "left": {
+                                "_nodetype": "FuncCall",
+                                "args": {
+                                    "_nodetype": "ExprList",
+                                    "coord": "test.c:13:16",
+                                    "exprs": [
+                                        {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:13:16",
+                                            "name": "word"
+                                        },
+                                        {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:13:22",
+                                            "name": "guess"
+                                        }
+                                    ]
+                                },
+                                "coord": "test.c:13:9",
+                                "name": {
+                                    "_nodetype": "ID",
+                                    "coord": "test.c:13:9",
+                                    "name": "strchr"
+                                }
+                            },
+                            "op": "==",
+                            "right": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:13:32",
+                                "name": "NULL"
+                            }
+                        },
+                        "coord": "test.c:13:5",
+                        "iffalse": null,
+                        "iftrue": {
+                            "_nodetype": "Return",
+                            "coord": "test.c:14:9",
+                            "expr": {
+                                "_nodetype": "UnaryOp",
+                                "coord": "test.c:14:17",
+                                "expr": {
+                                    "_nodetype": "Constant",
+                                    "coord": "test.c:14:17",
+                                    "type": "int",
+                                    "value": "1"
+                                },
+                                "op": "-"
+                            }
+                        }
+                    },
+                    {
+                        "_nodetype": "Assignment",
+                        "coord": "test.c:16:5",
+                        "lvalue": {
+                            "_nodetype": "ArrayRef",
+                            "coord": "test.c:16:5",
+                            "name": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:16:5",
+                                "name": "guesses"
+                            },
+                            "subscript": {
+                                "_nodetype": "FuncCall",
+                                "args": {
+                                    "_nodetype": "ExprList",
+                                    "coord": "test.c:16:20",
+                                    "exprs": [
+                                        {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:16:20",
+                                            "name": "guesses"
+                                        }
+                                    ]
+                                },
+                                "coord": "test.c:16:13",
+                                "name": {
+                                    "_nodetype": "ID",
+                                    "coord": "test.c:16:13",
+                                    "name": "strlen"
+                                }
+                            }
+                        },
+                        "op": "=",
+                        "rvalue": {
+                            "_nodetype": "ID",
+                            "coord": "test.c:16:32",
+                            "name": "guess"
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "test.c:18:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "coord": "test.c:18:12",
+                            "type": "int",
+                            "value": "0"
+                        }
+                    }
+                ],
+                "coord": "test.c:12:1"
+            },
+            "coord": "test.c:12:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "align": [],
+                "bitsize": null,
+                "coord": "test.c:12:5",
+                "funcspec": [],
+                "init": null,
+                "name": "check_guess",
+                "quals": [],
+                "storage": [],
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "args": {
+                        "_nodetype": "ParamList",
+                        "coord": "test.c:12:22",
+                        "params": [
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:12:22",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "guess",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "TypeDecl",
+                                    "align": null,
+                                    "coord": "test.c:12:22",
+                                    "declname": "guess",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "IdentifierType",
+                                        "coord": "test.c:12:17",
+                                        "names": [
+                                            "char"
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:12:34",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "word",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:12:34",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:12:35",
+                                        "declname": "word",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:12:29",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:12:46",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "guesses",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:12:46",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:12:47",
+                                        "declname": "guesses",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:12:41",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "coord": "test.c:12:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "align": null,
+                        "coord": "test.c:12:5",
+                        "declname": "check_guess",
+                        "quals": [],
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "coord": "test.c:12:1",
+                            "names": [
+                                "int"
+                            ]
+                        }
+                    }
+                }
+            },
+            "param_decls": null
+        },
+        {
+            "_nodetype": "FuncDef",
+            "body": {
+                "_nodetype": "Compound",
+                "block_items": [
+                    {
+                        "_nodetype": "Decl",
+                        "align": [],
+                        "bitsize": null,
+                        "coord": "test.c:22:9",
+                        "funcspec": [],
+                        "init": null,
+                        "name": "i",
+                        "quals": [],
+                        "storage": [],
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "align": null,
+                            "coord": "test.c:22:9",
+                            "declname": "i",
+                            "quals": [],
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "coord": "test.c:22:5",
+                                "names": [
+                                    "int"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "_nodetype": "For",
+                        "cond": {
+                            "_nodetype": "BinaryOp",
+                            "coord": "test.c:24:17",
+                            "left": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:24:17",
+                                "name": "i"
+                            },
+                            "op": "<",
+                            "right": {
+                                "_nodetype": "FuncCall",
+                                "args": {
+                                    "_nodetype": "ExprList",
+                                    "coord": "test.c:24:28",
+                                    "exprs": [
+                                        {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:24:28",
+                                            "name": "word"
+                                        }
+                                    ]
+                                },
+                                "coord": "test.c:24:21",
+                                "name": {
+                                    "_nodetype": "ID",
+                                    "coord": "test.c:24:21",
+                                    "name": "strlen"
+                                }
+                            }
+                        },
+                        "coord": "test.c:24:5",
+                        "init": {
+                            "_nodetype": "Assignment",
+                            "coord": "test.c:24:10",
+                            "lvalue": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:24:10",
+                                "name": "i"
+                            },
+                            "op": "=",
+                            "rvalue": {
+                                "_nodetype": "Constant",
+                                "coord": "test.c:24:14",
+                                "type": "int",
+                                "value": "0"
+                            }
+                        },
+                        "next": {
+                            "_nodetype": "UnaryOp",
+                            "coord": "test.c:24:35",
+                            "expr": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:24:35",
+                                "name": "i"
+                            },
+                            "op": "p++"
+                        },
+                        "stmt": {
+                            "_nodetype": "Compound",
+                            "block_items": [
+                                {
+                                    "_nodetype": "If",
+                                    "cond": {
+                                        "_nodetype": "BinaryOp",
+                                        "coord": "test.c:25:13",
+                                        "left": {
+                                            "_nodetype": "FuncCall",
+                                            "args": {
+                                                "_nodetype": "ExprList",
+                                                "coord": "test.c:25:20",
+                                                "exprs": [
+                                                    {
+                                                        "_nodetype": "ID",
+                                                        "coord": "test.c:25:20",
+                                                        "name": "guesses"
+                                                    },
+                                                    {
+                                                        "_nodetype": "ArrayRef",
+                                                        "coord": "test.c:25:29",
+                                                        "name": {
+                                                            "_nodetype": "ID",
+                                                            "coord": "test.c:25:29",
+                                                            "name": "word"
+                                                        },
+                                                        "subscript": {
+                                                            "_nodetype": "ID",
+                                                            "coord": "test.c:25:34",
+                                                            "name": "i"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "coord": "test.c:25:13",
+                                            "name": {
+                                                "_nodetype": "ID",
+                                                "coord": "test.c:25:13",
+                                                "name": "strchr"
+                                            }
+                                        },
+                                        "op": "==",
+                                        "right": {
+                                            "_nodetype": "ID",
+                                            "coord": "test.c:25:41",
+                                            "name": "NULL"
+                                        }
+                                    },
+                                    "coord": "test.c:25:9",
+                                    "iffalse": null,
+                                    "iftrue": {
+                                        "_nodetype": "Return",
+                                        "coord": "test.c:26:13",
+                                        "expr": {
+                                            "_nodetype": "TernaryOp",
+                                            "cond": {
+                                                "_nodetype": "BinaryOp",
+                                                "coord": "test.c:26:20",
+                                                "left": {
+                                                    "_nodetype": "ID",
+                                                    "coord": "test.c:26:20",
+                                                    "name": "tries_left"
+                                                },
+                                                "op": "<=",
+                                                "right": {
+                                                    "_nodetype": "Constant",
+                                                    "coord": "test.c:26:34",
+                                                    "type": "int",
+                                                    "value": "0"
+                                                }
+                                            },
+                                            "coord": "test.c:26:20",
+                                            "iffalse": {
+                                                "_nodetype": "Constant",
+                                                "coord": "test.c:26:43",
+                                                "type": "int",
+                                                "value": "0"
+                                            },
+                                            "iftrue": {
+                                                "_nodetype": "UnaryOp",
+                                                "coord": "test.c:26:39",
+                                                "expr": {
+                                                    "_nodetype": "Constant",
+                                                    "coord": "test.c:26:39",
+                                                    "type": "int",
+                                                    "value": "1"
+                                                },
+                                                "op": "-"
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "coord": "test.c:24:1"
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "test.c:29:5",
+                        "expr": {
+                            "_nodetype": "Constant",
+                            "coord": "test.c:29:12",
+                            "type": "int",
+                            "value": "1"
+                        }
+                    }
+                ],
+                "coord": "test.c:21:1"
+            },
+            "coord": "test.c:21:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "align": [],
+                "bitsize": null,
+                "coord": "test.c:21:5",
+                "funcspec": [],
+                "init": null,
+                "name": "check_game_over",
+                "quals": [],
+                "storage": [],
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "args": {
+                        "_nodetype": "ParamList",
+                        "coord": "test.c:21:26",
+                        "params": [
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:21:26",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "word",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:21:26",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:21:27",
+                                        "declname": "word",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:21:21",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:21:38",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "guesses",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "PtrDecl",
+                                    "coord": "test.c:21:38",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "TypeDecl",
+                                        "align": null,
+                                        "coord": "test.c:21:39",
+                                        "declname": "guesses",
+                                        "quals": [],
+                                        "type": {
+                                            "_nodetype": "IdentifierType",
+                                            "coord": "test.c:21:33",
+                                            "names": [
+                                                "char"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "_nodetype": "Decl",
+                                "align": [],
+                                "bitsize": null,
+                                "coord": "test.c:21:52",
+                                "funcspec": [],
+                                "init": null,
+                                "name": "tries_left",
+                                "quals": [],
+                                "storage": [],
+                                "type": {
+                                    "_nodetype": "TypeDecl",
+                                    "align": null,
+                                    "coord": "test.c:21:52",
+                                    "declname": "tries_left",
+                                    "quals": [],
+                                    "type": {
+                                        "_nodetype": "IdentifierType",
+                                        "coord": "test.c:21:48",
+                                        "names": [
+                                            "int"
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "coord": "test.c:21:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "align": null,
+                        "coord": "test.c:21:5",
+                        "declname": "check_game_over",
+                        "quals": [],
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "coord": "test.c:21:1",
+                            "names": [
+                                "int"
+                            ]
+                        }
+                    }
+                }
+            },
+            "param_decls": null
+        },
+        {
+            "_nodetype": "FuncDef",
+            "body": {
+                "_nodetype": "Compound",
+                "block_items": [
+                    {
+                        "_nodetype": "FuncCall",
+                        "args": {
+                            "_nodetype": "ExprList",
+                            "coord": "test.c:34:8",
+                            "exprs": [
+                                {
+                                    "_nodetype": "FuncCall",
+                                    "args": {
+                                        "_nodetype": "ExprList",
+                                        "coord": "test.c:34:13",
+                                        "exprs": [
+                                            {
+                                                "_nodetype": "ID",
+                                                "coord": "test.c:34:13",
+                                                "name": "NULL"
+                                            }
+                                        ]
+                                    },
+                                    "coord": "test.c:34:8",
+                                    "name": {
+                                        "_nodetype": "ID",
+                                        "coord": "test.c:34:8",
+                                        "name": "time"
+                                    }
+                                }
+                            ]
+                        },
+                        "coord": "test.c:34:2",
+                        "name": {
+                            "_nodetype": "ID",
+                            "coord": "test.c:34:2",
+                            "name": "srand"
+                        }
+                    },
+                    {
+                        "_nodetype": "Decl",
+                        "align": [],
+                        "bitsize": null,
+                        "coord": "test.c:36:6",
+                        "funcspec": [],
+                        "init": {
+                            "_nodetype": "BinaryOp",
+                            "coord": "test.c:36:19",
+                            "left": {
+                                "_nodetype": "FuncCall",
+                                "args": null,
+                                "coord": "test.c:36:19",
+                                "name": {
+                                    "_nodetype": "ID",
+                                    "coord": "test.c:36:19",
+                                    "name": "rand"
+                                }
+                            },
+                            "op": "%",
+                            "right": {
+                                "_nodetype": "ID",
+                                "coord": "test.c:36:26",
+                                "name": "num_words"
+                            }
+                        },
+                        "name": "random_index",
+                        "quals": [],
+                        "storage": [],
+                        "type": {
+                            "_nodetype": "TypeDecl",
+                            "align": null,
+                            "coord": "test.c:36:6",
+                            "declname": "random_index",
+                            "quals": [],
+                            "type": {
+                                "_nodetype": "IdentifierType",
+                                "coord": "test.c:36:2",
+                                "names": [
+                                    "int"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "_nodetype": "FuncCall",
+                        "args": {
+                            "_nodetype": "ExprList",
+                            "coord": "test.c:38:10",
+                            "exprs": [
+                                {
+                                    "_nodetype": "ArrayRef",
+                                    "coord": "test.c:38:10",
+                                    "name": {
+                                        "_nodetype": "ID",
+                                        "coord": "test.c:38:10",
+                                        "name": "words"
+                                    },
+                                    "subscript": {
+                                        "_nodetype": "ID",
+                                        "coord": "test.c:38:16",
+                                        "name": "random_index"
+                                    }
+                                }
+                            ]
+                        },
+                        "coord": "test.c:38:2",
+                        "name": {
+                            "_nodetype": "ID",
+                            "coord": "test.c:38:2",
+                            "name": "hangman"
+                        }
+                    },
+                    {
+                        "_nodetype": "Return",
+                        "coord": "test.c:40:2",
+                        "expr": {
+                            "_nodetype": "ID",
+                            "coord": "test.c:40:9",
+                            "name": "EXIT_SUCCESS"
+                        }
+                    }
+                ],
+                "coord": "test.c:33:1"
+            },
+            "coord": "test.c:33:5",
+            "decl": {
+                "_nodetype": "Decl",
+                "align": [],
+                "bitsize": null,
+                "coord": "test.c:33:5",
+                "funcspec": [],
+                "init": null,
+                "name": "main",
+                "quals": [],
+                "storage": [],
+                "type": {
+                    "_nodetype": "FuncDecl",
+                    "args": null,
+                    "coord": "test.c:33:5",
+                    "type": {
+                        "_nodetype": "TypeDecl",
+                        "align": null,
+                        "coord": "test.c:33:5",
+                        "declname": "main",
+                        "quals": [],
+                        "type": {
+                            "_nodetype": "IdentifierType",
+                            "coord": "test.c:33:1",
+                            "names": [
+                                "int"
+                            ]
+                        }
+                    }
+                }
+            },
+            "param_decls": null
+        }
+    ]
+}

@@ -34,9 +34,7 @@ char* readFile(const char *filename) {
 void count_if_def(json_value node, int *if_count) {                  
     if (strcmp("If",json_get_string(node,"_nodetype")) == 0){
         *if_count+=1;
-        printf("coord : %s\n",json_get_string(node, "coord"));
-
-        json_value iffalse = json_get(node,3);
+        json_value iffalse = json_get(node,3); //iffalse는 4번째에 위치함
         if (json_len(iffalse) != 0){
             count_if_def(iffalse,if_count);
             json_value iffalse_items = json_get(iffalse,"block_items");
@@ -48,7 +46,7 @@ void count_if_def(json_value node, int *if_count) {
             }
         }
 
-        json_value iftrue = json_get(node,4);
+        json_value iftrue = json_get(node,4); //iffalse는 5번째에 위치함
         count_if_def(iftrue,if_count);
         json_value iftrue_items = json_get(iftrue,"block_items");
         if (json_len(iftrue_items) !=0 ){
@@ -59,10 +57,19 @@ void count_if_def(json_value node, int *if_count) {
             }
     
     }
+    else if(strcmp("While",json_get_string(node,"_nodetype")) == 0){
+        json_value stmt = json_get(node,"stmt");
+        json_value stmt_block_items = json_get(stmt,"block_items");
+        for (int i=0; i<json_len(stmt_block_items); i++){
+            json_value stmt_item = json_get(stmt_block_items,i);
+            count_if_def(stmt_item,if_count);
+        }
+    }
+
 }
 
 int main() {
-	const char *str = readFile("binary.json");
+	const char *str = readFile("btree.json");
     int func_count = 0;
     json_value json = json_create(str); 
     json_value ext = json_get(json, "ext");
@@ -88,11 +95,26 @@ int main() {
             json_value type3 = json_get(type2, "type");
             json_value names = json_get(type3, "names");
             if (json_len(names) == 0){
-                json_value type4 = json_get(type3,"type");
-                json_value names2 = json_get(type4,"names");
-                printf("%d번재 리턴 타입 : ",func_count);
-                json_print(names2);
-                printf("\n");
+                json_value name = json_get(type3,"name");
+                if (json_len(name) == 0){
+                    json_value type4 = json_get(type3,"type");
+                    json_value names2 = json_get(type4,"names");
+                    if (json_len(names2) == 0){
+                        json_value name = json_get(type4,"name");
+                        printf("%d번재 리턴 타입 : ",func_count);
+                        json_print(name);
+                        printf("\n");
+                    }
+                    else{
+                        printf("%d번재 리턴 타입 : ",func_count);
+                        json_print(names2);
+                        printf("\n");
+                    }
+                }else{
+                    printf("%d번재 리턴 타입 : ",func_count);
+                    json_print(name);
+                    printf("\n");
+                }
             }
             else{
                 printf("%d번재 리턴 타입 : ",func_count);

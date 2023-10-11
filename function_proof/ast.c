@@ -116,44 +116,59 @@ void print_returntype_def(json_value node, int *func_count){
 
 
 void print_func_name(json_value node, int *func_count) {
-    json_value decl_name = json_get(node, "name");
-    if (decl_name != NULL) {
-        char *name = json_get_string(decl_name, "name");
-        if (name != NULL) {
-            printf("%d번째 함수 이름 : %s\n", *func_count, name);
+    json_value decl = json_get(node, "decl");
+    if (decl != NULL) {
+        json_value decl_name = json_get(decl, "name");
+        if (decl_name != NULL) {
+            char *name = json_get_string(decl_name, "name");
+            if (name != NULL) {
+                printf("%d번째 함수 이름: %s\n", *func_count, name);
+            } else {
+                printf("%d번째 함수 이름을 찾을 수 없습니다.\n", *func_count);
+            }
         } else {
             printf("%d번째 함수 이름을 찾을 수 없습니다.\n", *func_count);
         }
+    } else {
+        printf("%d번째 함수 선언을 찾을 수 없습니다.\n", *func_count);
     }
 }
 
 void print_func_params(json_value node, int *func_count) {
-    json_value decl_params = json_get(node, "param_decls");
+    json_value decl = json_get(node, "decl");
+    if (decl != NULL) {
+        json_value decl_params = json_get(decl, "type");
+        if (decl_params != NULL) {
+            json_value param_list = json_get(decl_params, "params");
+            if (param_list != NULL) {
+                int param_count = json_len(param_list);
+                if (param_count > 0) {
+                    printf("%d번째 함수 파라미터:\n", *func_count);
 
-    if (decl_params != NULL) {
-        printf("%d번째 함수 파라미터:\n", *func_count);
+                    for (int i = 0; i < param_count; i++) {
+                        json_value param = json_get(param_list, i);
+                        char *param_type = json_get_string(param, "type");
+                        char *param_name = json_get_string(param, "name");
 
-        for (int i = 0; i < json_len(decl_params); i++) {
-            json_value param = json_get(decl_params, i);
-
-            json_value param_type = json_get(param, "type");
-            json_value param_name = json_get(param, "name");
-
-            if (param_type != NULL && param_name != NULL) {
-                char *type_str = json_get_string(param_type, "names");
-                char *name_str = json_get_string(param_name, "name");
-                if (type_str != NULL && name_str != NULL) {
-                    printf("타입: %s, 변수명: %s\n", type_str, name_str);
+                        if (param_type != NULL && param_name != NULL) {
+                            printf("타입: %s, 변수명: %s\n", param_type, param_name);
+                        } else {
+                            printf("파라미터 정보를 찾을 수 없습니다.\n");
+                        }
+                    }
                 } else {
-                    printf("파라미터 정보를 찾을 수 없습니다.\n");
+                    printf("%d번째 함수 파라미터 정보가 없습니다.\n", *func_count);
                 }
-            } 
+            } else {
+                printf("%d번째 함수 파라미터 정보가 없습니다.\n", *func_count);
+            }
+        } else {
+            printf("%d번째 함수 파라미터 정보가 없습니다.\n", *func_count);
         }
     } else {
-        printf("%d번째 함수 파라미터 정보를 찾을 수 없습니다.\n", *func_count);
+        printf("%d번째 함수 선언을 찾을 수 없습니다.\n", *func_count);
     }
 }
-
 
 
 

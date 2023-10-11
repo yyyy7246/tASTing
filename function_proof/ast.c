@@ -31,6 +31,26 @@ char* readFile(const char *filename) {
 	return buffer;  
 }
 
+
+void find_names (json_value node){
+    json_value names = json_get(node, "names");
+    char *name = json_get_string(node, "name");
+    char *tmp = json_get_string(node,"tmptmptmptmptmptmp");
+    if (json_len(names) == 0 && name == tmp){
+        json_value type = json_get(node,"type");
+        find_names(type);
+    }else{
+        if (json_len(names) == 0){
+            printf("%s\n",name);
+        }else{
+            json_print(names);
+            printf("\n");
+        }
+        //return names;
+    }
+}
+
+
 void count_if_def(json_value node, int *if_count) {                
     if (strcmp("If",json_get_string(node,"_nodetype")) == 0){
         *if_count+=1;
@@ -79,68 +99,54 @@ int count_func_def(json_value node, int *func_count){
     return func_count;
 }
 
-
-void print_returntype_def(json_value node, int *func_count){
-    json_value type1 = json_get(node, "type");
-    json_value type2 = json_get(type1, "type");
-    json_value type3 = json_get(type2, "type");
-    json_value names = json_get(type3, "names");
-    if (json_len(names) == 0){
-        json_value name = json_get(type3,"name");
-        if (json_len(name) == 0){
-            json_value type4 = json_get(type3,"type");
-            json_value names2 = json_get(type4,"names");
-            if (json_len(names2) == 0){
-                json_value name = json_get(type4,"name");
-                printf("%d번재 리턴 타입 : ",*func_count);
-                json_print(name);
-                printf("\n");
-            }
-            else{
-                printf("%d번재 리턴 타입 : ",*func_count);
-                json_print(names2);
-                printf("\n");
-            }
-        }else{
-            printf("%d번재 리턴 타입 : ",*func_count);
-            json_print(name);
+void search_name_names(json_value node){
+    json_value type = json_get(node,"type"); 
+    json_value names = json_get(type, "names");
+    char *name = json_get_string(type, "name");
+    char *tmp = json_get_string(type,"tmptmptmptmptmptmp");
+    if (json_len(names) == 0 && name == tmp ){             
+        search_name_names(type);
+    }else{
+        if(json_len(names) ==0){
+            printf("%s\n",name);
+        } else{
+            json_print(names);
             printf("\n");
         }
     }
-    else{
-        printf("%d번재 리턴 타입 : ",*func_count);
-        json_print(names);
-        printf("\n");
-    }
+}
+
+void print_returntype_def(json_value node, int *func_count){ 
+    printf("%d번재 리턴 타입 : ",*func_count);
+    search_name_names(node);
 }
 
 
-
-void print_parameters(json_value node, int *func_count){
-    json_value decl = json_get(node, "decl");
-    json_value type = json_get(decl, "type");
-    json_value args = json_get(type, "args");
-    
-    
-    for(int i = 0 ; i < json_len(args) ; i++){
-        json_value arg = json_get(args, i);
-        json_value arg_type = json_get(arg, "type");
-        json_value arg_name = json_get(arg, "name");
-
-        printf("%d번째 함수 파라미터 타입 : ", *func_count);
-        json_print(arg_type);
-        printf("%d번째 함수 파라미터 이름 : ", *func_count);
-        json_print(arg_name);
-        printf("\n");
-    }
-
-
+void print_func_name(json_value node, int *func_count){
+    char *name = json_get_string(node, "name");
+    printf("%d번째 함수 이름 : %s\n",*func_count,name);
 }
+
+
+void print_params_info(json_value node, int *func_count){
+    json_value type = json_get(node, "type");
+    json_value args = json_get(type,"args");
+    if (json_len(args)==0){
+        printf("%d번째 함수의 파라미터는 없음.\n",*func_count);
+    }
+    json_value params = json_get(args,"params");
+    for (int i=0; i<json_len(params); i++){
+        json_value param = json_get(params,i);       
+        printf("%d번째 함수의 %d번째 파라미터 값 : ",*func_count,i+1);
+        find_names(param);
+    }
+}
+
 
 
 
 int main() {
-	const char *str = readFile("btree.json");
+	const char *str = readFile("binary.json");
     int total_func_count = 0;
     json_value json = json_create(str); 
     json_value ext = json_get(json, "ext");
@@ -155,12 +161,14 @@ int main() {
         if (strcmp("FuncDef",nodetype) == 0){ 
             func_count +=1;
             json_value decl = json_get(obj, "decl");
-
-
+            
             print_returntype_def(decl,&func_count);
+            
+ 
+            print_func_name(decl,&func_count);
 
 
-            print_parameters(decl, &func_count);
+            print_params_info(decl,&func_count);
 
 
             int if_count = 0;
@@ -174,7 +182,7 @@ int main() {
             total_if_count = total_if_count + if_count;
         }
     } 
-    printf("모든 if의 개수 : %d\n", total_if_count);           
+    printf("모든 if의 개수 : %d\n", total_if_count);
 
 
     

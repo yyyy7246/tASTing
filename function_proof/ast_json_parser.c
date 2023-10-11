@@ -84,6 +84,7 @@ int main() {
     printf("함수 개수: %d\n",func_count);
 
     func_count = 0;
+    int total_if_count = 0;
     for (int i=0; i<json_len(ext); i++){
         json_value obj = json_get(ext,i);
         char *nodetype = json_get_string(obj,"_nodetype");
@@ -132,8 +133,10 @@ int main() {
                 count_if_def(if_item, &if_count);
             }
             printf("%d번째 함수 if 개수 : %d\n\n",func_count,if_count);
+            total_if_count = total_if_count + if_count;
         }
-    }            
+    } 
+    printf("모든 if의 개수 : %d\n", total_if_count);           
 
 
     

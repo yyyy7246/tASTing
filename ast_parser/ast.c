@@ -132,21 +132,22 @@ void print_params_info(json_value node, int *func_count){
 
 
 int main() {
-	const char *str = readFile("btree.json");
-    int total_func_count = 0;
+	const char *str = readFile("btree.json");   //json 파일 불러오기
+    int total_func_count = 0;   // 함수 총 개수 구하기 위한 변수 선언
     json_value json = json_create(str); 
     json_value ext = json_get(json, "ext");
     count_func_def(ext, &total_func_count);
-    printf("함수 개수: %d\n",total_func_count);
+    printf("함수 개수: %d\n",total_func_count); // 함수 개수 출력
 
-    int func_count = 0;
-    int total_if_count = 0;
-    for (int i=0; i<json_len(ext); i++){
-        json_value obj = json_get(ext,i);
-        char *nodetype = json_get_string(obj,"_nodetype");
-        if (strcmp("FuncDef",nodetype) == 0){ 
+    int func_count = 0; // %d 번째 함수에 들어갈 변수 선언
+    int total_if_count = 0; // if 총 개수를 구하기 위한 변수 선언
+
+    for (int i=0; i<json_len(ext); i++){//ext는 배열 형태로 되어있기에 객체를 부르려면 길이를 받고 그 길이만큼 for문을 돌려야함
+        json_value obj = json_get(ext,i); //i번째 ext 객체를 obj로 선언
+        char *nodetype = json_get_string(obj,"_nodetype"); 
+        if (strcmp("FuncDef",nodetype) == 0){  //nodetype의 값이 FuncDef이면 함수를 뜻함
             func_count +=1;
-            json_value decl = json_get(obj, "decl");
+            json_value decl = json_get(obj, "decl"); //if문에서 함수의 배열만 decl값을 파싱하도록 함.
             
             print_returntype_def(decl,&func_count); // 함수 리턴 타입 추출
             

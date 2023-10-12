@@ -55,7 +55,6 @@ void search_name_names(json_value node){
             printf("%s",json_get_string(names,0));
         }
     }
- 
 }
 
 
@@ -87,12 +86,19 @@ void count_if_def(json_value node, int *if_count) {
                 }
         }  
     }
-    else if(strcmp("While",json_get_string(node,"_nodetype")) == 0 || strcmp("For",json_get_string(node,"_nodetype")) == 0 || strcmp("DoWhile",json_get_string(node,"_nodetype")) == 0){
+    else if(strcmp("While",json_get_string(node,"_nodetype")) == 0 || strcmp("For",json_get_string(node,"_nodetype")) == 0 || strcmp("DoWhile",json_get_string(node,"_nodetype")) == 0 || strcmp("Compound",json_get_string(node,"_nodetype")) == 0 || strcmp("Switch",json_get_string(node,"_nodetype")) == 0) {
         json_value stmt = json_get(node,"stmt");
         json_value stmt_block_items = json_get(stmt,"block_items");
         for (int i=0; i<json_len(stmt_block_items); i++){
             json_value stmt_item = json_get(stmt_block_items,i);
             count_if_def(stmt_item,if_count);
+            json_value stmts = json_get(stmt_item,"stmts");
+            if (json_len(stmts)!=0){
+                for (int j=0; j<json_len(stmts); j++){
+                    json_value stmts_item = json_get(stmts,j);
+                    count_if_def(stmts_item,if_count);
+                }
+            }
         }
     }
 }

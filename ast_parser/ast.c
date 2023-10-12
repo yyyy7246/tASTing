@@ -59,6 +59,7 @@ void search_name_names(json_value node){
 }
 
 
+
 void count_if_def(json_value node, int *if_count) {                
     if (strcmp("If",json_get_string(node,"_nodetype")) == 0){
         *if_count+=1;
@@ -75,17 +76,18 @@ void count_if_def(json_value node, int *if_count) {
         }
 
         json_value iftrue = json_get(node,4); //iffalse는 5번째에 위치함
-        count_if_def(iftrue,if_count);
-        json_value iftrue_items = json_get(iftrue,"block_items");
-        if (json_len(iftrue_items) !=0 ){
-                for (int i=0; i<json_len(iftrue_items); i++){
-                    json_value iftrue_item = json_get(iftrue_items,i);
-                    count_if_def(iftrue_item,if_count);
+        if (json_len(iftrue)!=0){
+            count_if_def(iftrue,if_count);
+            json_value iftrue_items = json_get(iftrue,"block_items");
+            if (json_len(iftrue_items) !=0 ){
+                    for (int i=0; i<json_len(iftrue_items); i++){
+                        json_value iftrue_item = json_get(iftrue_items,i);
+                        count_if_def(iftrue_item,if_count);
+                    }
                 }
-            }
-    
+        }  
     }
-    else if(strcmp("While",json_get_string(node,"_nodetype")) == 0){
+    else if(strcmp("While",json_get_string(node,"_nodetype")) == 0 || strcmp("For",json_get_string(node,"_nodetype")) == 0 || strcmp("DoWhile",json_get_string(node,"_nodetype")) == 0){
         json_value stmt = json_get(node,"stmt");
         json_value stmt_block_items = json_get(stmt,"block_items");
         for (int i=0; i<json_len(stmt_block_items); i++){
@@ -93,8 +95,8 @@ void count_if_def(json_value node, int *if_count) {
             count_if_def(stmt_item,if_count);
         }
     }
-
 }
+
 int count_func_def(json_value node, int *func_count){
     for (int i=0; i<json_len(node); i++){
         json_value obj = json_get(node,i);

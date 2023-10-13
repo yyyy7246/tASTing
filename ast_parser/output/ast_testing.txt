@@ -1,0 +1,167 @@
+총 함수 개수: 26
+
+1번재 리턴 타입 : ArvB *
+1번째 함수 이름 : CriaPagina
+1번째 함수의 1번째 파라미터 변수 명 : EhFolha, 타입 : int
+1번째 함수 if 개수 : 0
+
+2번재 리턴 타입 : ArvB *
+2번째 함수 이름 : QuebraPagina
+2번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+2번째 함수의 2번째 파라미터 변수 명 : QualFilho, 타입 : int
+2번째 함수의 3번째 파라미터 변수 명 : filho, 타입 : ArvB *
+2번째 함수 if 개수 : 1
+
+3번재 리턴 타입 : ArvB *
+3번째 함수 이름 : InsereSecundaria
+3번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+3번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+3번째 함수 if 개수 : 3
+
+4번재 리턴 타입 : ArvB *
+4번째 함수 이름 : Insere
+4번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+4번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+4번째 함수 if 개수 : 3
+
+5번재 리턴 타입 : ArvB *
+5번째 함수 이름 : RemoveFolha
+5번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+5번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+5번째 함수 if 개수 : 0
+
+6번재 리턴 타입 : long
+6번째 함수 이름 : MaiorDosMenores
+6번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+6번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+6번째 함수 if 개수 : 0
+
+7번재 리턴 타입 : long
+7번째 함수 이름 : MenorDosMaiores
+7번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+7번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+7번째 함수 if 개수 : 0
+
+8번재 리턴 타입 : ArvB *
+8번째 함수 이름 : PegaFilhoRicoEsquerdo
+8번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+8번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+8번째 함수 if 개수 : 2
+
+9번재 리턴 타입 : ArvB *
+9번째 함수 이름 : PegaFilhoRicoDireito
+9번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+9번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+9번째 함수 if 개수 : 2
+
+10번재 리턴 타입 : ArvB *
+10번째 함수 이름 : Concatena
+10번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+10번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+10번째 함수 if 개수 : 1
+
+11번재 리턴 타입 : ArvB *
+11번째 함수 이름 : Rotacao
+11번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+11번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+11번째 함수 if 개수 : 3
+
+12번재 리턴 타입 : ArvB *
+12번째 함수 이름 : RemoveGeral
+12번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+12번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+12번째 함수 if 개수 : 6
+
+13번재 리턴 타입 : ArvB *
+13번째 함수 이름 : RemoveIntermediario
+13번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+13번째 함수의 2번째 파라미터 변수 명 : posicao, 타입 : int
+13번째 함수 if 개수 : 2
+
+14번재 리턴 타입 : ArvB *
+14번째 함수 이름 : RemoveRaiz
+14번째 함수의 1번째 파라미터 변수 명 : raiz, 타입 : ArvB *
+14번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+14번째 함수 if 개수 : 3
+
+15번재 리턴 타입 : void
+15번째 함수 이름 : PrintaTudo
+15번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+15번째 함수 if 개수 : 3
+
+16번재 리턴 타입 : ArvB *
+16번째 함수 이름 : VerificaInsere
+16번째 함수의 1번째 파라미터 변수 명 : Antigo, 타입 : ArvB *
+16번째 함수의 2번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+16번째 함수의 3번째 파라미터 변수 명 : chave, 타입 : long
+16번째 함수 if 개수 : 5
+
+17번재 리턴 타입 : ArvB *
+17번째 함수 이름 : VerificaRemove
+17번째 함수의 1번째 파라미터 변수 명 : raiz, 타입 : ArvB *
+17번째 함수의 2번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+17번째 함수의 3번째 파라미터 변수 명 : chave, 타입 : long
+17번째 함수 if 개수 : 5
+
+18번재 리턴 타입 : int
+18번째 함수 이름 : Busca01
+18번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+18번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+18번째 함수 if 개수 : 5
+
+19번재 리턴 타입 : int
+19번째 함수 이름 : BuscaElemento
+19번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+19번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+19번째 함수의 3번째 파라미터 변수 명 : ano, 타입 : int
+19번째 함수 if 개수 : 5
+
+20번재 리턴 타입 : ArvB *
+20번째 함수 이름 : Incrementa
+20번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+20번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+20번째 함수 if 개수 : 3
+
+21번재 리턴 타입 : ArvB *
+21번째 함수 이름 : InsereVista
+21번째 함수의 1번째 파라미터 변수 명 : atual, 타입 : ArvB *
+21번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+21번째 함수 if 개수 : 1
+
+22번재 리턴 타입 : long
+22번째 함수 이름 : VerificaParcela
+22번째 함수의 1번째 파라미터 변수 명 : antiga, 타입 : ArvB *
+22번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+22번째 함수의 3번째 파라미터 변수 명 : parcela, 타입 : int
+22번째 함수 if 개수 : 1
+
+23번재 리턴 타입 : ArvB *
+23번째 함수 이름 : InsereParcelado
+23번째 함수의 1번째 파라미터 변수 명 : atual, 타입 : ArvB *
+23번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+23번째 함수의 3번째 파라미터 변수 명 : parcela, 타입 : int
+23번째 함수 if 개수 : 1
+
+24번재 리턴 타입 : int
+24번째 함수 이름 : BuscaMes
+24번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+24번째 함수의 2번째 파라미터 변수 명 : mes, 타입 : int
+24번째 함수의 3번째 파라미터 변수 명 : ano, 타입 : int
+24번째 함수 if 개수 : 0
+
+25번재 리턴 타입 : int
+25번째 함수 이름 : BuscaPeriodo
+25번째 함수의 1번째 파라미터 변수 명 : pagina, 타입 : ArvB *
+25번째 함수의 2번째 파라미터 변수 명 : chave, 타입 : long
+25번째 함수의 3번째 파라미터 변수 명 : dias, 타입 : int
+25번째 함수의 4번째 파라미터 변수 명 : ano, 타입 : int
+25번째 함수 if 개수 : 2
+
+26번재 리턴 타입 : int
+26번째 함수 이름 : main
+26번째 함수의 파라미터는 없음.
+26번째 함수 if 개수 : 14
+
+모든 if의 개수 : 71
+
+

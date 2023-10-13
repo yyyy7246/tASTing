@@ -1,0 +1,234 @@
+총 함수 개수: 41
+
+1번재 리턴 타입 : node *
+1번째 함수 이름 : create_node
+1번째 함수의 1번째 파라미터 변수 명 : data, 타입 : void *
+1번째 함수 if 개수 : 0
+
+2번재 리턴 타입 : node *
+2번째 함수 이름 : create_sentinel
+2번째 함수의 파라미터는 없음.
+2번째 함수 if 개수 : 0
+
+3번재 리턴 타입 : int
+3번째 함수 이름 : is_sentinel
+3번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+3번째 함수 if 개수 : 0
+
+4번재 리턴 타입 : node *
+4번째 함수 이름 : left_node
+4번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+4번째 함수 if 개수 : 0
+
+5번재 리턴 타입 : node *
+5번째 함수 이름 : right_node
+5번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+5번째 함수 if 개수 : 0
+
+6번재 리턴 타입 : node *
+6번째 함수 이름 : parent_node
+6번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+6번째 함수 if 개수 : 0
+
+7번재 리턴 타입 : void *
+7번째 함수 이름 : data
+7번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+7번째 함수 if 개수 : 0
+
+8번재 리턴 타입 : void
+8번째 함수 이름 : change_data
+8번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+8번째 함수의 2번째 파라미터 변수 명 : data, 타입 : void *
+8번째 함수 if 개수 : 0
+
+9번재 리턴 타입 : void
+9번째 함수 이름 : change_parent_node
+9번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+9번째 함수의 2번째 파라미터 변수 명 : parent, 타입 : node *
+9번째 함수 if 개수 : 0
+
+10번재 리턴 타입 : void
+10번째 함수 이름 : change_left_node
+10번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+10번째 함수의 2번째 파라미터 변수 명 : left, 타입 : node *
+10번째 함수 if 개수 : 0
+
+11번재 리턴 타입 : void
+11번째 함수 이름 : change_right_node
+11번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+11번째 함수의 2번째 파라미터 변수 명 : right, 타입 : node *
+11번째 함수 if 개수 : 0
+
+12번재 리턴 타입 : int
+12번째 함수 이름 : has_left_child
+12번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+12번째 함수 if 개수 : 0
+
+13번재 리턴 타입 : int
+13번째 함수 이름 : has_right_child
+13번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+13번째 함수 if 개수 : 0
+
+14번재 리턴 타입 : int
+14번째 함수 이름 : has_two_child
+14번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+14번째 함수 if 개수 : 1
+
+15번재 리턴 타입 : void
+15번째 함수 이름 : free_node
+15번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+15번째 함수 if 개수 : 1
+
+16번재 리턴 타입 : binary_tree *
+16번째 함수 이름 : create_binary_tree
+16번째 함수의 파라미터는 없음.
+16번째 함수 if 개수 : 0
+
+17번재 리턴 타입 : node *
+17번째 함수 이름 : root
+17번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+17번째 함수 if 개수 : 0
+
+18번재 리턴 타입 : void
+18번째 함수 이름 : change_root
+18번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+18번째 함수의 2번째 파라미터 변수 명 : root, 타입 : node *
+18번째 함수 if 개수 : 0
+
+19번재 리턴 타입 : int
+19번째 함수 이름 : is_root
+19번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+19번째 함수의 2번째 파라미터 변수 명 : n, 타입 : node *
+19번째 함수의 3번째 파라미터 변수 명 : compare, 타입 : Comparator
+19번째 함수 if 개수 : 0
+
+20번재 리턴 타입 : int
+20번째 함수 이름 : is_binary_tree_empty
+20번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+20번째 함수 if 개수 : 0
+
+21번재 리턴 타입 : node *
+21번째 함수 이름 : search
+21번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+21번째 함수의 2번째 파라미터 변수 명 : x, 타입 : void *
+21번째 함수의 3번째 파라미터 변수 명 : compare, 타입 : Comparator
+21번째 함수 if 개수 : 2
+
+22번재 리턴 타입 : int
+22번째 함수 이름 : contains
+22번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+22번째 함수의 2번째 파라미터 변수 명 : x, 타입 : void *
+22번째 함수의 3번째 파라미터 변수 명 : compare, 타입 : Comparator
+22번째 함수 if 개수 : 0
+
+23번재 리턴 타입 : void
+23번째 함수 이름 : change_sentinel_node
+23번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+23번째 함수의 2번째 파라미터 변수 명 : data, 타입 : void *
+23번째 함수 if 개수 : 0
+
+24번재 리턴 타입 : void
+24번째 함수 이름 : insert
+24번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+24번째 함수의 2번째 파라미터 변수 명 : x, 타입 : void *
+24번째 함수의 3번째 파라미터 변수 명 : compare, 타입 : Comparator
+24번째 함수 if 개수 : 1
+
+25번재 리턴 타입 : void
+25번째 함수 이름 : detach
+25번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+25번째 함수의 2번째 파라미터 변수 명 : n, 타입 : node *
+25번째 함수의 3번째 파라미터 변수 명 : link, 타입 : node *
+25번째 함수의 4번째 파라미터 변수 명 : compare, 타입 : Comparator
+25번째 함수 if 개수 : 3
+
+26번재 리턴 타입 : node *
+26번째 함수 이름 : successor
+26번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+26번째 함수의 2번째 파라미터 변수 명 : compare, 타입 : Comparator
+26번째 함수 if 개수 : 1
+
+27번재 리턴 타입 : void
+27번째 함수 이름 : delete
+27번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+27번째 함수의 2번째 파라미터 변수 명 : x, 타입 : void *
+27번째 함수의 3번째 파라미터 변수 명 : compare, 타입 : Comparator
+27번째 함수 if 개수 : 1
+
+28번재 리턴 타입 : int
+28번째 함수 이름 : _height
+28번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+28번째 함수 if 개수 : 2
+
+29번재 리턴 타입 : int
+29번째 함수 이름 : height
+29번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+29번째 함수 if 개수 : 0
+
+30번재 리턴 타입 : void
+30번째 함수 이름 : free_tree
+30번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+30번째 함수 if 개수 : 0
+
+31번재 리턴 타입 : int
+31번째 함수 이름 : int_ascending
+31번째 함수의 1번째 파라미터 변수 명 : a, 타입 : void *
+31번째 함수의 2번째 파라미터 변수 명 : b, 타입 : void *
+31번째 함수 if 개수 : 0
+
+32번재 리턴 타입 : char *
+32번째 함수 이름 : int_stringizer
+32번째 함수의 1번째 파라미터 변수 명 : a, 타입 : void *
+32번째 함수 if 개수 : 0
+
+33번재 리턴 타입 : void
+33번째 함수 이름 : _print_tree_pre_order
+33번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+33번째 함수의 2번째 파라미터 변수 명 : stringizer, 타입 : Stringizer
+33번째 함수 if 개수 : 1
+
+34번재 리턴 타입 : void
+34번째 함수 이름 : print_tree_pre_order
+34번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+34번째 함수 if 개수 : 1
+
+35번재 리턴 타입 : void
+35번째 함수 이름 : _print_tree_in_order
+35번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+35번째 함수의 2번째 파라미터 변수 명 : stringizer, 타입 : Stringizer
+35번째 함수 if 개수 : 1
+
+36번재 리턴 타입 : void
+36번째 함수 이름 : print_tree_in_order
+36번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+36번째 함수 if 개수 : 1
+
+37번재 리턴 타입 : void
+37번째 함수 이름 : _print_tree_post_order
+37번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+37번째 함수의 2번째 파라미터 변수 명 : stringizer, 타입 : Stringizer
+37번째 함수 if 개수 : 1
+
+38번재 리턴 타입 : void
+38번째 함수 이름 : print_tree_post_order
+38번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+38번째 함수 if 개수 : 1
+
+39번재 리턴 타입 : void
+39번째 함수 이름 : _print_tree_level_order
+39번째 함수의 1번째 파라미터 변수 명 : n, 타입 : node *
+39번째 함수의 2번째 파라미터 변수 명 : level, 타입 : int
+39번째 함수의 3번째 파라미터 변수 명 : stringizer, 타입 : Stringizer
+39번째 함수 if 개수 : 2
+
+40번재 리턴 타입 : void
+40번째 함수 이름 : print_tree_level_order
+40번째 함수의 1번째 파라미터 변수 명 : tree, 타입 : binary_tree *
+40번째 함수 if 개수 : 0
+
+41번재 리턴 타입 : int
+41번째 함수 이름 : main
+41번째 함수의 파라미터는 없음.
+41번째 함수 if 개수 : 0
+
+모든 if의 개수 : 20

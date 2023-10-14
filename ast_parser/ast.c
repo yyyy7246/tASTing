@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "json_c.c"
+#include "json_c_noError.c"
 
 char* readFile(const char *filename) {
     FILE *file = fopen(filename, "r");
